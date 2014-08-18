@@ -1,7 +1,7 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
 			controllerName="coreViews.textEditor" xmlns:html="http://www.w3.org/1999/xhtml"
 			xmlns:layout="sap.ui.commons.layout">
-	<layout:BorderLayout>
+	<layout:BorderLayout id="textEditorLayout">
 		<layout:top>
 			<layout:BorderLayoutArea areaId="top" size="30px">
 				<MenuBar>
