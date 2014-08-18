@@ -1,7 +1,7 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
 			controllerName="coreViews.main" xmlns:html="http://www.w3.org/1999/xhtml"
 			xmlns:layout="sap.ui.layout" xmlns:ux3="sap.ui.ux3">
-	<layout:VerticalLayout>
+	<layout:VerticalLayout width="100%">
 		<ApplicationHeader 
 			logoSrc="img/openui5_logo.png"
 			logoText="{i18n>headerLogoText}"
@@ -13,6 +13,6 @@
 			<ux3:NavigationItem text="{i18n>navTextEditor}" id="navTextEditor"/>
 			<ux3:NavigationItem text="{i18n>navTable}" id="navTable"/>
 		</ux3:NavigationBar>
-		<layout:VerticalLayout id="viewContainer"/>
+		<layout:VerticalLayout id="viewContainer" width="100%"/>
 	</layout:VerticalLayout>
 </core:View>

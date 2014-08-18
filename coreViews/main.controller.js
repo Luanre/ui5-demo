@@ -35,7 +35,7 @@ sap.ui.controller("coreViews.main", {
 		if(!this.oAbout){
 			this.oAbout = new sap.ui.xmlfragment(
 				{
-					fragmentName : 'ui5-demo.about'
+					fragmentName : 'menu.help.about'
 				},
 				{
 					closeAboutDialog : function(){
