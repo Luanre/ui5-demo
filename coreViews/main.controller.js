@@ -6,8 +6,6 @@ sap.ui.controller("coreViews.main", {
 * @memberOf ui5-demo.main
 */
 	onInit: function() {
-		jQuery.sap.require('sap.ui.core.routing.Route');
-		jQuery.sap.require('sap.ui.core.routing.Router');
 		var oResourceModel = new sap.ui.model.resource.ResourceModel({bundleName : 'models.i18n'});
 		this.oResourceModel = oResourceModel;
 	},
