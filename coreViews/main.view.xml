@@ -9,26 +9,10 @@
 			displayWelcome="true"
 			displayLogoff="true"
 		/>
-		<ux3:NavigationBar>
-			<ux3:NavigationItem text="{i18n>navTextEditor}" href="#text"/>
-			<ux3:NavigationItem text="{i18n>navTable}" href="#table"/>
+		<ux3:NavigationBar select="navigate">
+			<ux3:NavigationItem text="{i18n>navTextEditor}" id="navTextEditor"/>
+			<ux3:NavigationItem text="{i18n>navTable}" id="navTable"/>
 		</ux3:NavigationBar>
 		<layout:VerticalLayout id="viewContainer"/>
-		<MenuBar>
-			<MenuItem text="{i18n>menuFile}">
-				<Menu>
-					<MenuItem text="{i18n>menuFileNew}" />
-					<MenuItem text="{i18n>menuFileOpen}" />
-					<MenuItem text="{i18n>menuFileSave}" />
-					<MenuItem text="{i18n>menuFileSaveAs}" />
-				</Menu>
-			</MenuItem>
-			<MenuItem text="{i18n>menuHelp}">
-				<Menu>
-					<MenuItem text="{i18n>menuHelpAbout}" />
-				</Menu>
-			</MenuItem>
-		</MenuBar>
-		<TextArea value="{/fileContents}"/>
 	</layout:VerticalLayout>
 </core:View>

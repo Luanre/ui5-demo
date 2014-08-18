@@ -1,0 +1,19 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+			controllerName="coreViews.textEditor" xmlns:html="http://www.w3.org/1999/xhtml">
+		<MenuBar>
+			<MenuItem text="{i18n>menuFile}">
+				<Menu>
+					<MenuItem text="{i18n>menuFileNew}" />
+					<MenuItem text="{i18n>menuFileOpen}" />
+					<MenuItem text="{i18n>menuFileSave}" />
+					<MenuItem text="{i18n>menuFileSaveAs}" />
+				</Menu>
+			</MenuItem>
+			<MenuItem text="{i18n>menuHelp}">
+				<Menu>
+					<MenuItem text="{i18n>menuHelpAbout}" />
+				</Menu>
+			</MenuItem>
+		</MenuBar>
+		<TextArea value="{/fileContents}"/>
+</core:View>
