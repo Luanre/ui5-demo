@@ -10,8 +10,8 @@
 			displayLogoff="true"
 		/>
 		<ux3:NavigationBar>
-			<ux3:NavigateionItem text="{i18n>navTextEditor}" href="#text"/>
-			<ux3:NavigateionItem text="{i18n>navTable}" href="#table"/>
+			<ux3:NavigationItem text="{i18n>navTextEditor}" href="#text"/>
+			<ux3:NavigationItem text="{i18n>navTable}" href="#table"/>
 		</ux3:NavigationBar>
 		<layout:VerticalLayout id="viewContainer"/>
 		<MenuBar>
