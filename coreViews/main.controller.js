@@ -18,13 +18,15 @@ sap.ui.controller("coreViews.main", {
 			if(!this.oTextEditor){
 				this.oTextEditor = new sap.ui.view({viewName : 'coreViews.textEditor', type : 'XML'});
 			}
-			oContainer.setContent(this.oTextEditor);
+			oContainer.removeAllContent();
+			oContainer.addContent(this.oTextEditor);
 			break;
 		case 'main--navTable': 
 			if(!this.oTable){
 				this.oTable = new sap.ui.view({viewName : 'coreViews.table', type : 'XML'});
 			}
-			oContainer.setContent(this.oTable);
+			oContainer.removeAllContent();
+			oContainer.addContent(this.oTable);
 			break;
 		}
 	},
