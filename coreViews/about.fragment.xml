@@ -1,0 +1,7 @@
+<Dialog
+	xmlns="sap.ui.commons"
+	title="{i18n>aboutTitle}">
+	<buttons>
+		<Button text="{i18n>aboutClose}" press="closeAboutDialog"/>
+	</buttons>
+</Dialog>

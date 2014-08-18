@@ -1,0 +1,73 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+			controllerName="ui5-demo.table" xmlns:html="http://www.w3.org/1999/xhtml"
+			xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" 
+			xmlns:table="sap.ui.table">
+	<Panel>
+		<title>
+			<core:Title text="{i18n>tableAddRowTitle}" />
+		</title>
+		<content>
+			<form:Form>
+				<form:layout>
+					<form:GridLayout />
+				</form:layout>
+				<form:formContainers>
+					<form:FormContainer>
+						<form:formElements>
+							<form:FormElement>
+								<form:label>
+									<Label text="{i18n>tableName}" />
+								</form:label>
+								<form:fields>
+									<TextField value="{addRow>/Name}" />
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement>
+								<form:label>
+									<Label text="{i18n>tableSurname}" />
+								</form:label>
+								<form:fields>
+									<TextField value="{addRow>/Surname}" />
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement>
+								<form:label>
+									<Label text="{i18n>tableBirthday}" />
+								</form:label>
+								<form:fields>
+									<DatePicker value="{addRow>/Birthday}" />
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+				</form:formContainers>
+			</form:Form>
+		</content>
+	</Panel>
+	<table:Table>
+		<table:Column>
+			<table:label>
+				<Label text="{i18n>tableName}" />
+			</table:label>
+			<table:template>
+				<TextView text="{name}" />
+			</table:template>
+		</table:Column>
+		<table:Column>
+			<table:label>
+				<Label text="{i18n>tableSurname}" />
+			</table:label>
+			<table:template>
+				<TextView text="{surname}" />
+			</table:template>
+		</table:Column>
+		<table:Column>
+			<table:label>
+				<Label text="{i18n>tableBirthday}" />
+			</table:label>
+			<table:template>
+				<TextView text="{birthday}" />
+			</table:template>
+		</table:Column>
+	</table:Table>
+</core:View>
