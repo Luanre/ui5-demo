@@ -15,7 +15,8 @@
 		<script>
 				sap.ui.localResources("coreViews");
 				sap.ui.localResources("menu");
-				var view = sap.ui.view({id:"idmain1", viewName:"coreViews.main", type:sap.ui.core.mvc.ViewType.XML});
+				sap.ui.localResources("models");
+				var view = sap.ui.view({id:"main", viewName:"coreViews.main", type:sap.ui.core.mvc.ViewType.XML});
 				view.placeAt("content");
 		</script>
 
