@@ -7,7 +7,7 @@ sap.ui.controller("coreViews.main", {
 */
 	onInit: function() {
 		var oResourceModel = new sap.ui.model.resource.ResourceModel({bundleName : 'models.i18n'});
-		this.oResourceModel = oResourceModel;
+		sap.ui.getCore().setModel(oResourceModel, 'i18n');
 	},
 	
 	navigate : function(e){
