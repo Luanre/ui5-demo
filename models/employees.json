@@ -1,29 +1,29 @@
 [{
-	name : 'John',
-	surname : 'Smith',
-	Birthday : 1000000000
+	"name" : "John",
+	"surname" : "Smith",
+	"birthday" : 1000000000
 },{
-	name : 'Alex',
-	surname : 'Begstein',
-	Birthday : 1020000000
+	"name" : "Alex",
+	"surname" : "Begstein",
+	"birthday" : 1020000000
 },{
-	name : 'Samantha',
-	surname : 'Cox',
-	Birthday : 1010000000
+	"name" : "Samantha",
+	"surname" : "Cox",
+	"birthday" : 1010000000
 },{
-	name : 'Lisa',
-	surname : 'Simpson',
-	Birthday : 1040000000
+	"name" : "Lisa",
+	"surname" : "Simpson",
+	"birthday" : 1040000000
 },{
-	name : 'Kevin',
-	surname : 'Johnson',
-	Birthday : 1030000000
+	"name" : "Kevin",
+	"surname" : "Johnson",
+	"birthday" : 1030000000
 },{
-	name : 'Charles',
-	surname : 'Burns',
-	Birthday : 1070000000
+	"name" : "Charles",
+	"surname" : "Burns",
+	"birthday" : 1070000000
 },{
-	name : 'Martha',
-	surname : 'Goldman',
-	Birthday : 1090000000
+	"name" : "Martha",
+	"surname" : "Goldman",
+	"birthday" : 1090000000
 }]
