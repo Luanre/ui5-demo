@@ -1,5 +1,5 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
-			controllerName="ui5-demo.main" xmlns:html="http://www.w3.org/1999/xhtml"
+			controllerName="coreViews.main" xmlns:html="http://www.w3.org/1999/xhtml"
 			xmlns:layout="sap.ui.layout" xmlns:ux3="sap.ui.ux3">
 	<layout:VerticalLayout>
 		<ApplicationHeader 

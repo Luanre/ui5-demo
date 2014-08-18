@@ -1,4 +1,4 @@
-sap.ui.controller("ui5-demo.table", {
+sap.ui.controller("coreViews.table", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
