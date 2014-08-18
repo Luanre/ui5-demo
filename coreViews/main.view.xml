@@ -3,13 +3,14 @@
 			xmlns:layout="sap.ui.layout" xmlns:ux3="sap.ui.ux3">
 	<layout:VerticalLayout width="100%">
 		<ApplicationHeader 
+			id="appHeader"
 			logoSrc="img/openui5_logo.png"
 			logoText="{i18n>headerLogoText}"
 			userName="%USERNAME%"
 			displayWelcome="true"
 			displayLogoff="true"
 		/>
-		<ux3:NavigationBar select="navigate">
+		<ux3:NavigationBar select="navigate" id="appNav">
 			<ux3:NavigationItem text="{i18n>navTextEditor}" id="navTextEditor"/>
 			<ux3:NavigationItem text="{i18n>navTable}" id="navTable"/>
 		</ux3:NavigationBar>
