@@ -19,14 +19,14 @@
 			<firstPaneContent>
 				<layout:VerticalLayout>
 					<Label text="{i18n>language}" />
-					<DropdownBox select="switchLanguage">
+					<DropdownBox change="switchLanguage">
 						<items>
-							<core:ListItem text="{i18n>russion}" key="ru" />
+							<core:ListItem text="{i18n>russian}" key="ru" />
 							<core:ListItem text="{i18n>english}" key="en" />
 						</items>
 					</DropdownBox>
 					<Label text="{i18n>theme}" />
-					<DropdownBox select="switchTheme">
+					<DropdownBox change="switchTheme">
 						<items>
 							<core:ListItem text="SAP BlueCrystal" key="sap_bluecrystal" />
 							<core:ListItem text="SAP GoldReflection" key="sap_goldreflection" />

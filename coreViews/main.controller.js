@@ -37,7 +37,7 @@ sap.ui.controller("coreViews.main", {
 	},
 	
 	switchLanguage : function(e){
-		var sLocale = e.getSource().getValue(),
+		var sLocale = e.getSource().getSelectedKey(),
 			oResourceModel = new sap.ui.model.resource.ResourceModel({
 				bundleName : 'models.i18n',
 				bundleLocal : sLocale
@@ -46,7 +46,7 @@ sap.ui.controller("coreViews.main", {
 	},
 	
 	switchTheme : function(e){
-		var sKey = e.getSource().getValue();
+		var sKey = e.getSource().getSelectedKey();
 		sap.ui.getCore().applyTheme(sKey);
 	},
 	
