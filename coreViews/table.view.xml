@@ -44,7 +44,7 @@
 			</form:Form>
 		</content>
 	</Panel>
-	<table:Table>
+	<table:Table id="tableEmployees">
 		<table:Column>
 			<table:label>
 				<Label text="{i18n>tableName}" />
