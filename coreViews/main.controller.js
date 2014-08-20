@@ -36,6 +36,20 @@ sap.ui.controller("coreViews.main", {
 		}
 	},
 	
+	switchLanguage : function(e){
+		var sLocale = e.getSource().getValue(),
+			oResourceModel = new sap.ui.model.resource.ResourceModel({
+				bundleName : 'models.i18n',
+				bundleLocal : sLocale
+			});
+		sap.ui.getCore().setModel(oResourceModel, 'i18n');
+	},
+	
+	switchTheme : function(e){
+		var sKey = e.getSource().getValue();
+		sap.ui.getCore().applyTheme(sKey);
+	},
+	
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 * (NOT before the first rendering! onInit() is used for that one!).

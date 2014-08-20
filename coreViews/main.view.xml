@@ -14,6 +14,29 @@
 			<ux3:NavigationItem text="{i18n>navTextEditor}" id="navTextEditor"/>
 			<ux3:NavigationItem text="{i18n>navTable}" id="navTable"/>
 		</ux3:NavigationBar>
-		<layout:VerticalLayout id="viewContainer" width="100%"/>
+		<Splitter
+			splitterOrientation="Vertical">
+			<firstPaneContent>
+				<layout:VerticalLayout>
+					<Label text="{i18n>language}" />
+					<DropdownBox select="switchLanguage">
+						<items>
+							<core:ListItem text="{i18n>russion}" key="ru" />
+							<core:ListItem text="{i18n>english}" key="en" />
+						</items>
+					</DropdownBox>
+					<Label text="{i18n>theme}" />
+					<DropdownBox select="switchTheme">
+						<items>
+							<core:ListItem text="SAP BlueCrystal" key="sap_bluecrystal" />
+							<core:ListItem text="SAP GoldReflection" key="sap_goldreflection" />
+						</items>
+					</DropdownBox>
+				</layout:VerticalLayout>
+			</firstPaneContent>
+			<secondPaneContent>
+				<layout:VerticalLayout id="viewContainer" width="100%"/>
+			</secondPaneContent>
+		</Splitter>
 	</layout:VerticalLayout>
 </core:View>
