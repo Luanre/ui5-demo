@@ -1,4 +1,4 @@
-sap.ui.controller("coreViews.table", {
+sap.ui.controller("coreViews.appraisal", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -6,16 +6,11 @@ sap.ui.controller("coreViews.table", {
 * @memberOf coreViews.table
 */
 	onInit: function() {
-		var oModel = new sap.ui.model.json.JSONModel(),
-			oTable = this.getView().byId('tableEmployees');
-		oModel.loadData('models/employees.json');
-		oTable.setModel(oModel);
-		oTable.bindRows('/');
+		var oModel = new sap.ui.model.json.JSONModel()
+		oModel.loadData('models/appraisal.json');
+		this.getView().setModel(oModel, 'appraisal');
 	},
 	
-	formatDate: function(iValue) {
-		return iValue ? new Date(iValue) : "";
-	}
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

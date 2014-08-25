@@ -1,0 +1,41 @@
+{
+	"appraisee" : "Селедков Михаил",
+	"appraiser" : "Орлова Наталья",
+	"goalJob"   : "Ведущий разработчик",
+	"currentJob": "Старший разработчик",
+	"validityPeriodBegin" : "20140101",
+	"validityPeriodEnd" : "20141231",
+	"buttons" : [{
+		"text" : "Сохранить",
+		"buttonId" : "SAVE"
+	},{
+		"text" : "Отправить на утверждение",
+		"buttonId" : "NEXT"
+	}],
+	"individualGoals" : [{
+		"text" : "Английский язык",
+		"until" : "20140312",
+		"comment" : "Изучение английского языка",
+		"actions" : [{
+			"type" : "courses",
+			"comment" : "Курс Upper-Intermediate",
+			"courseId" : 213
+		},{
+			"type" : "self",
+			"comment" : "Расширение словарного запаса со словарем."
+			"courseId" : 0
+	}],
+	"jobGoals" : [{
+		"text" : "Unit-тестирование",
+		"currentLevel" : 3,
+		"requiredLevel" : 6,
+		"comment" : "",
+		"actions" : [{
+			"type" : ""
+		},{
+		
+		}]
+	},{
+	
+	}]
+}

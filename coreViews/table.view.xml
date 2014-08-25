@@ -45,7 +45,9 @@
 		</content>
 	</Panel>
 	<table:Table id="tableEmployees">
-		<table:Column>
+		<table:Column
+			sortProperty="name"
+			filterProperty="name">
 			<table:label>
 				<Label text="{i18n>tableName}" />
 			</table:label>
@@ -53,7 +55,9 @@
 				<TextView text="{name}" />
 			</table:template>
 		</table:Column>
-		<table:Column>
+		<table:Column
+			sortProperty="surname"
+			filterProperty="surname">
 			<table:label>
 				<Label text="{i18n>tableSurname}" />
 			</table:label>
@@ -61,12 +65,14 @@
 				<TextView text="{surname}" />
 			</table:template>
 		</table:Column>
-		<table:Column>
+		<table:Column
+			sortProperty="birthday"
+			filterProperty="birthday">
 			<table:label>
 				<Label text="{i18n>tableBirthday}" />
 			</table:label>
 			<table:template>
-				<TextView text="{birthday}" />
+				<TextView text="{path : 'birthday', formatter : '.formatDate'}" />
 			</table:template>
 		</table:Column>
 	</table:Table>

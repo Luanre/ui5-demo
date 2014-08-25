@@ -40,7 +40,7 @@ sap.ui.controller("coreViews.main", {
 		var sLocale = e.getSource().getSelectedKey(),
 			oResourceModel = new sap.ui.model.resource.ResourceModel({
 				bundleName : 'models.i18n',
-				bundleLocal : sLocale
+				bundleLocale : sLocale
 			});
 		sap.ui.getCore().setModel(oResourceModel, 'i18n');
 	},

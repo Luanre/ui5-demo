@@ -15,7 +15,9 @@
 			<ux3:NavigationItem text="{i18n>navTable}" id="navTable"/>
 		</ux3:NavigationBar>
 		<Splitter
-			splitterOrientation="Vertical">
+			splitterOrientation="Vertical"
+			minSizeSecondPane="80%"
+			>
 			<firstPaneContent>
 				<layout:VerticalLayout>
 					<Label text="{i18n>language}" />

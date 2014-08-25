@@ -1,0 +1,64 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+			controllerName="coreViews.appraisal" xmlns:html="http://www.w3.org/1999/xhtml"
+			xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" 
+			xmlns:table="sap.ui.table">
+	<layout:VerticalLayout>
+		<RoadMap>
+			<RoadMapStep label="{i18n>appraisalCreation}" enabled="false" />
+			<RoadMapStep label="{i18n>appraisalGoals}" enabled="false">
+				<subStep>
+					<RoadMapStep label="{i18n>appraisalGoalsEmployee}" />
+					<RoadMapStep label="{i18n>appraisalGoalsManager}" enabled="false" />
+				</subStep>
+			</RoadMapStep>
+			<RoadMapStep label="{i18n>appraisalSelf}" enabled="false"/>
+			<RoadMapStep label="{i18n>appraisalManager}" enabled="false"/>
+			<RoadMapStep label="{i18n>appraisalFinished}" enabled="false"/>
+		</RoadMap>
+		<Toolbar>
+			<Button text="{i18n>appraisalSave}" />
+			<Button text="{i18n>appraisalSendToConfirm}" />
+		</Toolbar>
+		<Panel>
+			<title>
+				<core:Title text="{i18n>appraisalInfo}" />
+			</title>
+			<content>
+				<layout:MatrixLayout width="500px" widths="200px,300px">
+					<layout:MatrixLayoutRow>
+						<layout:MatrixLayoutCell>
+							<Label text="{i18n>appraisalAppraisee}" />
+						</layout:MatrixLayoutCell>
+						<layout:MatrixLayoutCell>
+							<TextField value="{appraisal>/appraisee}" editable="false" />
+						</layout:MatrixLayoutCell>
+					</layout:MatrixLayoutRow>
+					<layout:MatrixLayoutRow>
+						<layout:MatrixLayoutCell>
+							<Label text="{i18n>appraisalAppraiser}" />
+						</layout:MatrixLayoutCell>
+						<layout:MatrixLayoutCell>
+							<TextField value="{appraisal>/appraiser}" editable="false" />
+						</layout:MatrixLayoutCell>
+					</layout:MatrixLayoutRow>
+					<layout:MatrixLayoutRow>
+						<layout:MatrixLayoutCell>
+							<Label text="{i18n>appraisalValidityPeriod}" />
+						</layout:MatrixLayoutCell>
+						<layout:MatrixLayoutCell>
+							<layout:HorizontalLayout>
+								<DatePicker value="{appraisal>/validityPeriodBegin}" editable="false" />
+								<TextView text="{i18n>appraisalUntil}" />
+								<DatePicker value="{appraisal>/validityPeriodEnd}" editable="false" />
+							</layout:HorizontalLayout>
+						</layout:MatrixLayoutCell>
+					</layout:MatrixLayoutRow>
+				</layout:MatrixLayout>
+			</content>
+		</Panel>
+		<SegmentedButton>
+			<Button text="{i18n>appraisalGoalsIndividual}" />
+			<Button text="{i18n>appraisalGoalsJob}" />
+		</SegmentedButton>
+	</layout:VerticalLayout>
+</core:View>
