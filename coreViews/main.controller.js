@@ -33,6 +33,13 @@ sap.ui.controller("coreViews.main", {
 			oContainer.removeAllContent();
 			oContainer.addContent(this.oTable);
 			break;
+		case 'main--navAppraisal': 
+			if(!this.oAppraisal){
+				this.oAppraisal = new sap.ui.view({viewName : 'coreViews.appraisal', type : 'XML'});
+			}
+			oContainer.removeAllContent();
+			oContainer.addContent(this.oAppraisal);
+			break;
 		}
 	},
 	

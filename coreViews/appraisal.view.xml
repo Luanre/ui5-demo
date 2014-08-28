@@ -5,11 +5,11 @@
 	<layout:VerticalLayout>
 		<RoadMap>
 			<RoadMapStep label="{i18n>appraisalCreation}" enabled="false" />
-			<RoadMapStep label="{i18n>appraisalGoals}" enabled="false">
-				<subStep>
+			<RoadMapStep label="{i18n>appraisalGoals}">
+				<subSteps>
 					<RoadMapStep label="{i18n>appraisalGoalsEmployee}" />
 					<RoadMapStep label="{i18n>appraisalGoalsManager}" enabled="false" />
-				</subStep>
+				</subSteps>
 			</RoadMapStep>
 			<RoadMapStep label="{i18n>appraisalSelf}" enabled="false"/>
 			<RoadMapStep label="{i18n>appraisalManager}" enabled="false"/>
@@ -24,41 +24,91 @@
 				<core:Title text="{i18n>appraisalInfo}" />
 			</title>
 			<content>
-				<layout:MatrixLayout width="500px" widths="200px,300px">
-					<layout:MatrixLayoutRow>
-						<layout:MatrixLayoutCell>
+				<layout.MatrixLayout width="500px" widths="140px,300px">
+					<layout.MatrixLayoutRow>
+						<layout.MatrixLayoutCell hAlign="Right">
 							<Label text="{i18n>appraisalAppraisee}" />
-						</layout:MatrixLayoutCell>
-						<layout:MatrixLayoutCell>
+						</layout.MatrixLayoutCell>
+						<layout.MatrixLayoutCell>
 							<TextField value="{appraisal>/appraisee}" editable="false" />
-						</layout:MatrixLayoutCell>
-					</layout:MatrixLayoutRow>
-					<layout:MatrixLayoutRow>
-						<layout:MatrixLayoutCell>
+						</layout.MatrixLayoutCell>
+					</layout.MatrixLayoutRow>
+					<layout.MatrixLayoutRow>
+						<layout.MatrixLayoutCell hAlign="Right">
 							<Label text="{i18n>appraisalAppraiser}" />
-						</layout:MatrixLayoutCell>
-						<layout:MatrixLayoutCell>
+						</layout.MatrixLayoutCell>
+						<layout.MatrixLayoutCell>
 							<TextField value="{appraisal>/appraiser}" editable="false" />
-						</layout:MatrixLayoutCell>
-					</layout:MatrixLayoutRow>
-					<layout:MatrixLayoutRow>
-						<layout:MatrixLayoutCell>
+						</layout.MatrixLayoutCell>
+					</layout.MatrixLayoutRow>
+					<layout.MatrixLayoutRow>
+						<layout.MatrixLayoutCell hAlign="Right">
+							<Label text="{i18n>appraisalCurrentJob}" />
+						</layout.MatrixLayoutCell>
+						<layout.MatrixLayoutCell>
+							<TextField value="{appraisal>/currentJob}" editable="false" />
+						</layout.MatrixLayoutCell>
+					</layout.MatrixLayoutRow>
+					<layout.MatrixLayoutRow>
+						<layout.MatrixLayoutCell hAlign="Right">
+							<Label text="{i18n>appraisalGoalJob}" />
+						</layout.MatrixLayoutCell>
+						<layout.MatrixLayoutCell>
+							<TextField value="{appraisal>/goalJob}" editable="false" />
+						</layout.MatrixLayoutCell>
+					</layout.MatrixLayoutRow>
+					<layout.MatrixLayoutRow>
+						<layout.MatrixLayoutCell hAlign="Right">
 							<Label text="{i18n>appraisalValidityPeriod}" />
-						</layout:MatrixLayoutCell>
-						<layout:MatrixLayoutCell>
+						</layout.MatrixLayoutCell>
+						<layout.MatrixLayoutCell>
 							<layout:HorizontalLayout>
-								<DatePicker value="{appraisal>/validityPeriodBegin}" editable="false" />
+								<DatePicker yyyymmdd="{appraisal>/validityPeriodBegin}" editable="false" width="100px"/>
 								<TextView text="{i18n>appraisalUntil}" />
-								<DatePicker value="{appraisal>/validityPeriodEnd}" editable="false" />
+								<DatePicker yyyymmdd="{appraisal>/validityPeriodEnd}" editable="false" width="100px"/>
 							</layout:HorizontalLayout>
-						</layout:MatrixLayoutCell>
-					</layout:MatrixLayoutRow>
-				</layout:MatrixLayout>
+						</layout.MatrixLayoutCell>
+					</layout.MatrixLayoutRow>
+				</layout.MatrixLayout>
 			</content>
 		</Panel>
-		<SegmentedButton>
-			<Button text="{i18n>appraisalGoalsIndividual}" />
-			<Button text="{i18n>appraisalGoalsJob}" />
-		</SegmentedButton>
+		<SegmentedButton buttons="{path:'appraisal>/buttons',factory:'.buttonsFactory'}" />
+		<TabStrip>
+			<Tab text="{i18n>appraisalGoalsIndividual}">
+				<layout.MatrixLayout width="100%" widths="280px">
+					<layout.MatrixLayoutRow>
+						<layout.MatrixLayoutCell>
+							<table:Table
+								width="100%"
+								rows="{path:'appraisal>/individualGoals'}"
+								selectionBehavior="RowOnly"
+								rowSelectionChange="selectIndividualQualification"
+							>
+								<table:toolbar>
+									<Toolbar>
+										<Button text="{i18n>appraisalAdd}" />
+										<Button text="{i18n>appraisalRemoveSelected}" />
+									</Toolbar>
+								</table:toolbar>
+								<table:Column>
+									<table:label>
+										<Label text="{i18n>appraisalQualifications}" />
+									</table:label>
+									<table:template>
+										<TextView text="{appraisal>text}" />
+									</table:template>
+								</table:Column>
+							</table:Table>
+						</layout.MatrixLayoutCell>
+						<layout.MatrixLayoutCell vAlign="Top">
+							<layout:VerticalLayout id="individualGoadContent" width="100%"/>
+						</layout.MatrixLayoutCell>
+					</layout.MatrixLayoutRow>
+				</layout.MatrixLayout>
+			</Tab>
+			<Tab text="{i18n>appraisalGoalsJob}">
+			
+			</Tab>
+		</TabStrip>
 	</layout:VerticalLayout>
 </core:View>

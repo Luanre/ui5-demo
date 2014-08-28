@@ -13,32 +13,32 @@
 		<ux3:NavigationBar select="navigate" id="appNav">
 			<ux3:NavigationItem text="{i18n>navTextEditor}" id="navTextEditor"/>
 			<ux3:NavigationItem text="{i18n>navTable}" id="navTable"/>
+			<ux3:NavigationItem text="{i18n>navAppraisal}" id="navAppraisal"/>
 		</ux3:NavigationBar>
-		<Splitter
-			splitterOrientation="Vertical"
-			minSizeSecondPane="80%"
-			>
-			<firstPaneContent>
-				<layout:VerticalLayout>
-					<Label text="{i18n>language}" />
-					<DropdownBox change="switchLanguage">
-						<items>
-							<core:ListItem text="{i18n>russian}" key="ru" />
-							<core:ListItem text="{i18n>english}" key="en" />
-						</items>
-					</DropdownBox>
-					<Label text="{i18n>theme}" />
-					<DropdownBox change="switchTheme">
-						<items>
-							<core:ListItem text="SAP BlueCrystal" key="sap_bluecrystal" />
-							<core:ListItem text="SAP GoldReflection" key="sap_goldreflection" />
-						</items>
-					</DropdownBox>
-				</layout:VerticalLayout>
-			</firstPaneContent>
-			<secondPaneContent>
-				<layout:VerticalLayout id="viewContainer" width="100%"/>
-			</secondPaneContent>
-		</Splitter>
+		<layout.MatrixLayout width="100%" widths="180px">
+			<layout.MatrixLayoutRow>
+				<layout.MatrixLayoutCell vAlign="Top" hAlign="Center">
+					<layout:VerticalLayout>
+						<Label text="{i18n>language}" />
+						<DropdownBox change="switchLanguage">
+							<items>
+								<core:ListItem text="{i18n>russian}" key="ru" />
+								<core:ListItem text="{i18n>english}" key="en" />
+							</items>
+						</DropdownBox>
+						<Label text="{i18n>theme}" />
+						<DropdownBox change="switchTheme">
+							<items>
+								<core:ListItem text="SAP BlueCrystal" key="sap_bluecrystal" />
+								<core:ListItem text="SAP GoldReflection" key="sap_goldreflection" />
+							</items>
+						</DropdownBox>
+					</layout:VerticalLayout>
+				</layout.MatrixLayoutCell>
+				<layout.MatrixLayoutCell>
+					<layout:VerticalLayout id="viewContainer" width="100%"/>
+				</layout.MatrixLayoutCell>
+			</layout.MatrixLayoutRow>
+		</layout.MatrixLayout>
 	</layout:VerticalLayout>
 </core:View>

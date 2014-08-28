@@ -11,7 +11,35 @@ sap.ui.controller("coreViews.appraisal", {
 		this.getView().setModel(oModel, 'appraisal');
 	},
 	
-
+	buttonsFactory : function(sId, oCtx){
+		return new sap.ui.commons.Button({
+			text : oCtx.getProperty('text'),
+			customData : [{
+				key : 'buttonId',
+				value : oCtx.getProperty('buttonId')
+			}]
+		});
+	},
+	
+	selectIndividualQualification : function(e){
+		var oParams = e.getParameters(),
+			oTable = e.getSource(),
+			oLayout = this.getView().byId("individualGoadContent");
+		if(!oTable['contents' + oParams.rowIndex]){
+			var oFragment = sap.ui.xmlfragment('menu.appraisal.qualification',{
+				actionsFactory : function(sId, oCtx){
+					var oPanel = new sap.ui.commons.Panel({
+						title : oCtx.getProperty('title')
+					});
+					return oPanel;
+				}		
+			});
+			oFragment.setBindingContext(oParams.rowContext);
+			oTable['contents' + oParams.rowIndex] = oFragment;
+		}
+		oLayout.removeAllContent();
+		oLayout.addContent(oTable['contents' + oParams.rowIndex]);
+	}
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 * (NOT before the first rendering! onInit() is used for that one!).

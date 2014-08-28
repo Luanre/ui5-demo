@@ -19,7 +19,7 @@
 									<Label text="{i18n>tableName}" />
 								</form:label>
 								<form:fields>
-									<TextField value="{addRow>/Name}" />
+									<TextField value="{addRow>/Name}"/>
 								</form:fields>
 							</form:FormElement>
 							<form:FormElement>

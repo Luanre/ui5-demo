@@ -9,12 +9,17 @@ sap.ui.controller("coreViews.table", {
 		var oModel = new sap.ui.model.json.JSONModel(),
 			oTable = this.getView().byId('tableEmployees');
 		oModel.loadData('models/employees.json');
-		oTable.setModel(oModel);
+		this.getView().setModel(oModel);
 		oTable.bindRows('/');
 	},
 	
 	formatDate: function(iValue) {
-		return iValue ? new Date(iValue) : "";
+		if(iValue){
+			var oDate = new Date(iValue);
+			return ("0" + oDate.getDate()).slice(-2) + "." + ("0" + (oDate.getMonth() + 1)).slice(-2) + "." + oDate.getFullYear();
+		} else {
+			return "";
+		}
 	}
 
 /**
