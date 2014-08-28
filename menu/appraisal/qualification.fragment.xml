@@ -1,0 +1,8 @@
+<layout.VerticalLayout xmlns="sap.ui.commons">
+	<TextView design="H1" text="{appraisal>text}" />
+	<TextView design="H2" text="{i18n>appraisalWillBeMadeBy}" />
+	<DatePicker yyyymmdd="{appraisal>until}"/>
+	<TextView design="H2" text="{i18n>appraisalComment}" />
+	<TextArea value="{appraisal>comment}" width="400px" height="80px"/>
+	<layout.VerticalLayout content="{path : 'appraisal>actions', factory : '.actionsFactory'}" />
+</layout.VerticalLayout>
